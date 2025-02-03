@@ -1,0 +1,300 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(255,255, 255, 0.8)), url(./img/img1.jpg);
+  background-size: cover;
+  background-position: right;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+/* Header styles */
+header {
+  background: rgb(44, 62, 80);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+ margin-top: 0;
+ margin-bottom: 8px;
+}
+
+.description {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
+/* Register button styles */
+.register-button {
+  background: #f39c12;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #e67e22;
+}
+
+/* How it works styles */
+h2 {
+  text-align: center;
+}
+
+.how-it-works {
+  background: rgba(255,255, 255, 0.3);
+  max-width: 400px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Form styles */
+#register-form {
+  background: rgba(255, 255, 255, 0.3);
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.form-part {
+  margin: 0 auto 10px auto;
+  padding: 4px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+input {
+  font-family: inherit;
+  margin: inherit;
+  font-size: 0.875rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 36px;
+  padding: 5.6px 12px;
+  border: 1.6px;
+  border-radius: 4px;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+span {
+  font-size: 0.8rem;
+  padding-top: 1.6px;
+}
+
+select {
+  font-size: 14px;
+}
+
+textarea {
+  width: 100%;
+  height: 80px;
+  padding: 7px 12px;
+  font-size: 14px;
+  border: 1.6px;
+  border-radius: 4px;
+  resize: none;
+} 
+
+.submit-button  {
+  background: #f39c12;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: center;
+  width: 100%;
+}
+
+/* Footer styles */
+footer {
+  margin-top: 20px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  background: rgb(44, 62, 80);
+  color: white;
+  text-align: center;
+  font-style: italic;
+  font-size: 1.125rem;
+}
+
+.copyright {
+  font-style: normal;
+  margin-top: 50px;
+  font-size: 0.8rem;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5); /* Slightly dark background */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  position: relative;
+  background-image: url(./img/img2.jpg);
+  background-color: rgba(255, 255, 255, 0.8);
+  background-position: center;
+  background-size: cover;
+  width: 90%;
+  color: black;
+  padding: 20px;
+  max-width: 400px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.modal-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.modal-content * {
+  position: relative;
+  z-index: 2;
+}
+
+button.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  font-weight: bolder;
+  cursor: pointer;
+  color: black;
+}
+
+.close:hover {
+  color: rgba(255, 255, 255, 0.5)
+}
+
+/* Shake styles */
+@keyframes shake {
+  0% {transform: translateX(0); }
+  25% {transform: translateX(-5px); }
+  50% {transform: translateX(5px); }
+  75% {transform: translateX(-5px); }
+  100% {transform: translateX(0); }
+}
+
+.shake {
+  animation: shake 0.5s ease-in-out;
+  border: 2px solid red;
+}
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+  .how-it-works {
+    width: 80%;
+    padding: 15px;
+  }
+
+  #register-form {
+    width: 90%;
+  }
+
+  .form-part input, .form-part select, .form-part textarea {
+    font-size: 0.875rem;
+  }
+
+  .modal-content{
+    width: 90%;
+  }
+}
+
+/* For smaller screens */
+@media (max-width: 600px) {
+  body {
+    background-position: center;
+  }
+  #register-form {
+    padding: 15px;
+    max-width: 90%;
+  }
+  .form-part {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    padding: 10px;
+  }
+
+  .how-it-works, #register-form {
+    width: 95%;
+    font-size: 0.875rem;
+    padding: 10px;
+  }
+
+  .form-part input, .form-part select, .form-part textarea {
+    font-size: 0.875rem;
+  }
+
+  .register-button {
+    font-size: 0.875rem;
+    padding: 8px 16px;
+  }
+
+  .modal-content {
+    width: 95%;
+    padding: 15px;
+  }
+}
+
+
+
