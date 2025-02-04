@@ -4,8 +4,13 @@
 
 /* Body styles */
 body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(255,255, 255, 0.8)), url(./img/img1.jpg);
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url(./assets/img1.jpg);
   background-size: cover;
   background-position: right;
   position: relative;
@@ -22,8 +27,8 @@ header {
 }
 
 h1 {
- margin-top: 0;
- margin-bottom: 8px;
+  margin-top: 0;
+  margin-bottom: 8px;
 }
 
 .description {
@@ -54,7 +59,7 @@ h2 {
 }
 
 .how-it-works {
-  background: rgba(255,255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.3);
   max-width: 400px;
   text-align: center;
   border-radius: 10px;
@@ -127,9 +132,9 @@ textarea {
   border: 1.6px;
   border-radius: 4px;
   resize: none;
-} 
+}
 
-.submit-button  {
+.submit-button {
   background: #f39c12;
   color: white;
   border: none;
@@ -161,8 +166,9 @@ footer {
 }
 
 /* Modal Styles */
-.modal {
-  display: none;
+.hide,
+.show {
+  display: flex;
   background-color: rgba(0, 0, 0, 0.5); /* Slightly dark background */
   position: fixed;
   top: 0;
@@ -172,10 +178,13 @@ footer {
   justify-content: center;
   align-items: center;
 }
+.hide {
+  display: none;
+}
 
 .modal-content {
   position: relative;
-  background-image: url(./img/img2.jpg);
+  background-image: url(./assets/img2.jpg);
   background-color: rgba(255, 255, 255, 0.8);
   background-position: center;
   background-size: cover;
@@ -219,16 +228,26 @@ button.close {
 }
 
 .close:hover {
-  color: rgba(255, 255, 255, 0.5)
+  color: rgba(255, 255, 255, 0.5);
 }
 
 /* Shake styles */
 @keyframes shake {
-  0% {transform: translateX(0); }
-  25% {transform: translateX(-5px); }
-  50% {transform: translateX(5px); }
-  75% {transform: translateX(-5px); }
-  100% {transform: translateX(0); }
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .shake {
@@ -247,11 +266,13 @@ button.close {
     width: 90%;
   }
 
-  .form-part input, .form-part select, .form-part textarea {
+  .form-part input,
+  .form-part select,
+  .form-part textarea {
     font-size: 0.875rem;
   }
 
-  .modal-content{
+  .modal-content {
     width: 90%;
   }
 }
@@ -275,13 +296,16 @@ button.close {
     padding: 10px;
   }
 
-  .how-it-works, #register-form {
+  .how-it-works,
+  #register-form {
     width: 95%;
     font-size: 0.875rem;
     padding: 10px;
   }
 
-  .form-part input, .form-part select, .form-part textarea {
+  .form-part input,
+  .form-part select,
+  .form-part textarea {
     font-size: 0.875rem;
   }
 
@@ -295,6 +319,3 @@ button.close {
     padding: 15px;
   }
 }
-
-
-
