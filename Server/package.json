@@ -1,0 +1,28 @@
+{
+  "name": "gift-exchange",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/NDUBLACK/Gift-exchange#readme",
+  "bugs": {
+    "url": "https://github.com/NDUBLACK/Gift-exchange/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NDUBLACK/Gift-exchange.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js",
+    "start": "server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  }
+}
