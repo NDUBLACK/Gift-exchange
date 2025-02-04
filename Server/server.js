@@ -86,7 +86,7 @@ app.get("/register", async (req, res) => {
     chunkedArray.forEach((group, index) => {
       group.map((item) => {
         regg += item.name;
-        regg += "+";
+        regg += ",";
       });
       regg += "<br />";
     });
