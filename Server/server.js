@@ -10,8 +10,8 @@ const port = process.env.PORT;
 
 // Middleware
 const limiter = rateLimit({
-  windowMs: 24 * 60 * 60 * 1000, // 24 hours
-  limit: 100, // Limit each IP to 1 request per windowMs
+  windowMs: 7 * 24 * 60 * 60 * 1000, // 1 week
+  limit: 1, // Limit each IP to 1 request per windowMs
   standardHeaders: "draft-8", // Use the latest standard headers
   legacyHeaders: false, // Disable legacy headers
 });
