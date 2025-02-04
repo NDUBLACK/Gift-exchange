@@ -16,7 +16,9 @@ export default function Section2() {
     setMsg("Form Submitted Successfully ✔️");
   };
   const fail = () => {
-    setMsg("Error Submitting form, retry later 🚫");
+    setMsg(
+      "Error Submitting form, This might be because filled this form before🚫"
+    );
   };
 
   const handlesubmit = async (e) => {
@@ -44,11 +46,12 @@ export default function Section2() {
           <label htmlFor="name">Full Name</label>
           <input
             className="form-control"
-            name="Name"
+            name="name"
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             type="text"
             placeholder="Enter your full name"
+            autoComplete="false"
             required
           />
         </div>
@@ -57,7 +60,7 @@ export default function Section2() {
           <label htmlFor="number">Phone Number</label>
           <input
             className="form-control"
-            name="Number"
+            name="number"
             value={FormData.number}
             type="number"
             placeholder="Phone number"
@@ -66,6 +69,7 @@ export default function Section2() {
             onChange={(e) =>
               setFormData({ ...formData, number: e.target.value })
             }
+            autoComplete="false"
             required
           />
         </div>
@@ -75,7 +79,11 @@ export default function Section2() {
           <button className="submit-button">Submit & Get Matched</button>
         </div>
       </form>
-      <Modal display={modalDisplay} msg={msg} />
+      <Modal
+        setModalDisplay={setModalDisplay}
+        display={modalDisplay}
+        msg={msg}
+      />
     </section>
   );
 }
